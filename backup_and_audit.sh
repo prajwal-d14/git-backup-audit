@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Today=$(date +%Y%m%d)
+Today=$(date +%Y%m%d_%H%M%S)
 file="/home/ec2-user/repo-list.txt"
 
 while IFS= read -r repo; do
@@ -19,7 +19,7 @@ while IFS= read -r repo; do
 	
 	sleep 10
 	
-	sudo tar -czf /var/backups/${reponame}-$Today.tar.gz -C /home/ec2-user $reponame
+	sudo tar -czf /home/ec2-user/git-backup-audit/${reponame}-$Today.tar.gz -C /home/ec2-user $reponame
 
 	sleep 5
 	
@@ -27,7 +27,7 @@ while IFS= read -r repo; do
 	
 	cd ..
 	
-	sudo mv	$reponame-audit-$Today.txt /var/backups/
+	sudo mv	$reponame-audit-$Today.txt /home/ec2-user/git-backup-audit/
 	
 	else
 	

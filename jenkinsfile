@@ -1,12 +1,31 @@
 pipeline {
 	agent none
 		stages{
+			stage('SCM Checkout') {
+				agent { label 'compile' }
+				steps {
+					git branch: 'main', url: 'https://github.com/prajwal-d14/git-backup-audit.git'
+				}
+			}
+
 			stage ( git audit and backup ){
 				agent {label 'compile'}
 				steps{
 					sh '''
 						backup_and_audit.sh
+						'''
 
+				}
+			}
+			stage ( adding the archives and logs to remote repo ){
+				agent {label 'compile'}
+				steps{
+					sh '''
+						cd /home/ec2-user/git-backup-audit
+
+						git add * $$ git commmit -m " added logs and archive"
+
+						git push origin main
 						'''
 
 				}
