@@ -1,0 +1,15 @@
+pipeline {
+	agent none
+		stages{
+			stage ( git audit and backup ){
+				agent {label 'compile'}
+				steps{
+					sh '''
+						backup_and_audit.sh
+
+						'''
+
+				}
+			}
+		}
+}
