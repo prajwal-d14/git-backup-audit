@@ -1,7 +1,7 @@
 #!/bin/bash
 
 Today=$(date+%Y%m%d_%H%M%S)
-file="/home/ec2-user/repo-list.txt"
+file="/home/ubuntu/repo-list.txt"
 
 while IFS= read -r repo; do
     if [ -z "$repo" ]; then
@@ -15,7 +15,7 @@ while IFS= read -r repo; do
 	
 	cd $reponame
 	
-    git pull $repo
+    	git pull $repo
 	
 	sleep 10
 	
@@ -23,11 +23,7 @@ while IFS= read -r repo; do
 
 	sleep 5
 	
-	git log --since=1.day >> /home/ubuntu/$reponame-audit-$Today.txt
-	
-	cd ..
-	
-	sudo mv	$reponame-audit-$Today.txt /home/ubuntu/git-backup-audit/
+	sudo git log --since=1.day >> /home/ubuntu/$reponame-audit-$Today.txt
 	
 	else
 	
