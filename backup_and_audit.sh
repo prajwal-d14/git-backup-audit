@@ -23,7 +23,9 @@ while IFS= read -r repo; do
 
 	sleep 5
 	
-	sudo git log --since=1.day >> /home/ubuntu/$reponame-audit-$Today.txt
+	sudo git log --since=1.day >> /home/ubuntu/git-backup-audit/$reponame-audit-$Today.txt
+
+	cat /home/ubuntu/git-backup-audit/$reponame-audit-$Today.txt
 	
 	else
 	
