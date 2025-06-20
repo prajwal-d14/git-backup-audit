@@ -1,0 +1,5 @@
+commit 1bc28c346789a8f5ed63440f04e14ebde21a0315
+Author: prajwal-d14 <gat15cv080@gmail.com>
+Date:   Fri Jun 20 11:39:01 2025 +0530
+
+    Create awscli.sh
