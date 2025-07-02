@@ -1,0 +1,17 @@
+commit 75542b36652075741c40d24728b7eabb60e2bc20
+Author: prajwal-d14 <gat15cv080@gmail.com>
+Date:   Wed Jul 2 13:02:12 2025 +0530
+
+    Update docker.sh
+
+commit 0d2d37ba08ef221d16eb5d0d817c3ed6f9653d01
+Author: prajwal-d14 <gat15cv080@gmail.com>
+Date:   Wed Jul 2 13:01:45 2025 +0530
+
+    Update awscli.sh
+
+commit d66ea938a1b17bf05ccc1ff4a43a2490f3722a5b
+Author: prajwal-d14 <gat15cv080@gmail.com>
+Date:   Wed Jul 2 13:01:18 2025 +0530
+
+    Update jdk.sh
